@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/altas', function () {
   return view('welcome');
 });
+
+Route::get('/bajas', function () {
+  return view('welcome');
+});
+
+Route::get('/consultas', function () {
+  return view('welcome');
+});
