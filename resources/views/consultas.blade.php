@@ -9,11 +9,18 @@
       <th scope="col">#</th>
      <th scope="col">Nombre</th>
      <th scope="col">Email</th>
-     <th scope="col">Handl</th>
+     <th scope="col">Password</th>
    </tr>
-@foreach($datos as $lista)
-  {{ $lista->name }}
-  {{ $lista->email }}
-  {{ $lista->password }}
-@endforeach
+  </thead>
+  <tbody>
+    <tr>
+      @foreach($datos as $lista)
+        <th scope"row">{{ $lista->id }}</th>
+          <td>{{ $lista->name }}</td>
+          <td>{{ $lista->email }}</td>
+          <td>{{ $lista->password }}</td>
+      @endforeach
+    </tr>
+  </tbody>
+</table>
 @endsection
