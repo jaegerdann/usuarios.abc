@@ -16,13 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/altas', function () {
-  return view('welcome');
+  return view('altas');
 });
 
 Route::get('/bajas', function () {
-  return view('welcome');
+  return view('bajas');
 });
 
 Route::get('/consultas', function () {
-  return view('welcome');
+  return view('consultas');
 });
+
+Route::post('/altas/guardar', 'userController@guarda');
