@@ -13,9 +13,23 @@ class userController extends Controller
     $tabla = User::create([
       'name' => $request->nombre,
       'email' => $request->email,
-      'password' => $request->password
+      'password' => $request->password,
+      'status' => true
     ]);
 
     return redirect('/altas');
+  }
+  public function inicio()
+  {
+    return view('index');
+  }
+  public function Altas()
+  {
+    return view('altas');
+  }
+  public function Consultas()
+  {
+    $datos = User::all();
+    return view('consultas',compact('datos'));
   }
 }

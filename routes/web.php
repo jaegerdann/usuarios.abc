@@ -10,21 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'userController@inicio');
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/altas', 'userController@altas');
 
-Route::get('/altas', function () {
-  return view('altas');
-});
-
-Route::get('/bajas', function () {
-  return view('bajas');
-});
-
-Route::get('/consultas', function () {
-  return view('consultas');
-});
+Route::get('/consultas', 'userController@consultas');
 
 Route::post('/altas/guardar', 'userController@guarda');
