@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       @foreach($datos as $lista)
-        <th scope"row">{{ $lista->id }}</th>
+        <th scope"row">{{ $lista->id }}</th><br>
           <td>{{ $lista->name }}</td>
           <td>{{ $lista->email }}</td>
           <td>{{ $lista->password }}</td>
