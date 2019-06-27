@@ -29,8 +29,8 @@ class userController extends Controller
   }
   public function Consultas()
   {
-    $datos = User::all();
-  //  $datos = User::where('status', '1');
+    //$datos = User::all();
+    $datos = User::where('status', 1)->get();
     return view('consultas',compact('datos'));
   }
   public function delete(Request $request)
