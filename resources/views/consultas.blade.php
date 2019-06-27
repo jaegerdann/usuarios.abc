@@ -30,7 +30,7 @@
       </tr>
     @endforeach
   </tbody>
-  //va el form para el boton altas
 </table>
+    <a href="/altas" class="btn btn-primary">Altas</a>
 </div>
 @endsection

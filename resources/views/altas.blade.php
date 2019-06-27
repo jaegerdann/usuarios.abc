@@ -6,7 +6,6 @@
 <h1>altas</h1>
 
 <form action="/altas/guardar" method="post">
-
 {{ csrf_field() }}
 
   <div class="form-group">
@@ -17,7 +16,7 @@
   <div class="form-group">
     <label for="InputEmail">Direccion Email</label>
     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" class="form-text text-muted"></small>
   </div>
 
   <div class="form-group">
@@ -25,11 +24,9 @@
     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
   </div>
 
-
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-  <button type="submit" class="btn btn-outline-secondary">consultar</button>
-
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  <a href="/consultas" class="btn btn-outline-secondary">Consultas</a>
+  <a href="/" class="btn btn-outline-success">Regresar a Inicio</a>
 </form>
 </div>
 @endsection
