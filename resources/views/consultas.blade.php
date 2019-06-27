@@ -29,8 +29,8 @@
         </td>
       </tr>
     @endforeach
-
   </tbody>
+  //va el form para el boton altas
 </table>
 </div>
 @endsection

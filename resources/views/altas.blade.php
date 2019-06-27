@@ -28,6 +28,7 @@
 
 
   <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-outline-secondary">consultar</button>
 
 </form>
 </div>
