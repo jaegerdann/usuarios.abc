@@ -17,3 +17,5 @@ Route::get('/altas', 'userController@altas');
 Route::get('/consultas', 'userController@consultas');
 
 Route::post('/altas/guardar', 'userController@guarda');
+
+Route::post('/delete', 'userController@delete');

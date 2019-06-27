@@ -10,6 +10,7 @@
      <th scope="col">Nombre</th>
      <th scope="col">Email</th>
      <th scope="col">Password</th>
+     <th scope="col">Acción</th>
    </tr>
   </thead>
   <tbody>
@@ -19,6 +20,13 @@
         <td>{{ $lista->name }}</td>
         <td>{{ $lista->email }}</td>
         <td>{{ $lista->password }}</td>
+        <td>
+          <form action="/delete" method="post">
+            {{ csrf_field() }}
+            <input type="hidden" name="id" id="id" value="{{ $lista->id }}">
+            <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+          </form>
+        </td>
       </tr>
     @endforeach
 

@@ -14,7 +14,7 @@ class userController extends Controller
       'name' => $request->nombre,
       'email' => $request->email,
       'password' => $request->password,
-      'status' => true
+      'status' => 1
     ]);
 
     return redirect('/altas');
@@ -30,6 +30,14 @@ class userController extends Controller
   public function Consultas()
   {
     $datos = User::all();
+  //  $datos = User::where('status', '1');
     return view('consultas',compact('datos'));
+  }
+  public function delete(Request $request)
+  {
+      $do = User::find($request->id);
+      $do->status = 0;
+      $do->save();
+      return redirect('/consultas');
   }
 }
