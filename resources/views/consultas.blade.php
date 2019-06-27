@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
-
+<div class="container">
 <h1>consultas</h1>
 <table class="table">
   <thead class="thead-dark">
@@ -13,14 +13,16 @@
    </tr>
   </thead>
   <tbody>
-    <tr>
-      @foreach($datos as $lista)
-        <th scope"row">{{ $lista->id }}</th><br>
-          <td>{{ $lista->name }}</td>
-          <td>{{ $lista->email }}</td>
-          <td>{{ $lista->password }}</td>
-      @endforeach
-    </tr>
+    @foreach($datos as $lista)
+      <tr>
+        <td scope"row">{{ $lista->id }}</td>
+        <td>{{ $lista->name }}</td>
+        <td>{{ $lista->email }}</td>
+        <td>{{ $lista->password }}</td>
+      </tr>
+    @endforeach
+
   </tbody>
 </table>
+</div>
 @endsection
